@@ -17,7 +17,9 @@ This project is currently in active development with a comprehensive foundation 
 - ✅ **Layer Control UI**: Complete layer management panel with search, filtering, and visual feedback
 - ✅ **Dynamic Styling System**: Real-time element styling with color, opacity, and stroke width controls
 - ✅ **Element Selection System**: Complete element interaction with hit testing, selection state, information display, and comprehensive integration testing
-- 🚧 **Measurement Tools**: Measurement toolbar component in development for distance and area measurement functionality
+- ✅ **Measurement Tools**: Complete measurement system with MeasurementController for interactive distance and area measurement functionality
+- ✅ **Export System**: Complete export functionality with PNG, SVG, and PDF formats, including scale bars, north arrows, and comprehensive test coverage
+- ✅ **Configuration Management**: Complete preset system with save/load functionality, search, and management operations
 - 🚧 **UI Components**: Basic components with Kiro integration hooks
 
 ## Features
@@ -46,14 +48,35 @@ This project is currently in active development with a comprehensive foundation 
 
 ### Implemented Advanced Features (continued)
 - **Element Information Display**: Interactive popup component for detailed element property inspection with auto-positioning and keyboard navigation
+- **Measurement System**: Complete interactive measurement functionality with MeasurementController for distance and area measurements with visual overlays
+
+### Configuration Management
+- **Preset System**: Complete save/load system for viewer configurations with named presets
+- **State Capture**: Automatic capture of current viewer state (visible layers, styling, transform)
+- **Preset Management**: Full CRUD operations (create, read, update, delete) with search functionality
+- **Import/Export**: JSON-based preset import/export for sharing configurations
+- **Error Handling**: Comprehensive validation and error recovery with user-friendly messages
+- **Persistence**: localStorage integration with automatic state rehydration
+- **Search & Filter**: Real-time preset search by name and description
+- **UI Integration**: Modal dialogs for preset operations with keyboard navigation support
+
+### Export Functionality
+- **Multi-Format Export**: PNG (raster), SVG (vector), and PDF (document) export capabilities
+- **High-Quality Output**: Configurable resolution scaling (1x-5x) for high-DPI displays and print quality
+- **Professional Annotations**: Dynamic scale bars with automatic unit conversion (m/km) and north arrow indicators
+- **Format-Specific Options**: PNG resolution control, PDF paper sizes (A0-A4) and orientation settings
+- **Current View Export**: Respects current zoom level, visible layers, and styling for accurate representation
+- **Error Handling**: Comprehensive validation with user-friendly error messages and size limit protection
+- **Progress Tracking**: Real-time export progress with loading states and completion feedback
+- **Automatic Download**: Generated files with timestamped filenames for easy organization
+- **Kiro Integration**: Export event tracking for monitoring and analytics
+- **Memory Safety**: Automatic resource cleanup and size validation to prevent browser issues
 
 ### In Development Features
-- **Measurement Tools**: Distance and area measurement with visual overlays (MeasurementToolbar component in progress)
+- **Measurement Tools UI**: MeasurementToolbar component for measurement mode controls and management interface
 
 ### Planned Advanced Features
-- **Export Functionality**: PNG, SVG, and PDF export with configurable options
 - **Search & Navigation**: Element search with autocomplete and zoom-to-element
-- **Configuration Management**: Save/load presets with local storage persistence
 - **Split-View Comparison**: Side-by-side storey comparison with synchronized navigation
 - **Multi-storey Navigation**: Floor/level switching with state preservation
 
@@ -123,6 +146,10 @@ npm run test:ui      # Run tests with Vitest UI
 - ✅ **Touch Gestures Hook** (16 tests): Multi-touch gesture recognition and handling
 - ✅ **Styling Panel** (7 tests): Dynamic styling UI component with real-time controls
 - ✅ **Style Persistence Hook** (5 tests): localStorage integration for style preferences
+- ✅ **Export Functionality** (25 tests): Complete export system with PNG, SVG, and PDF formats
+  - **ExportUtils** (15 tests): Core export utilities with format validation, annotation generation, and error handling
+  - **useExport Hook** (5 tests): Export hook with progress tracking, error management, and Kiro integration
+  - **ExportDialog** (5 tests): Export UI component with format selection, options configuration, and user interaction
 - 🚧 **Style Manager** (in progress): DOM styling utility with batching and transitions (test file started)
 - 🚧 **Real-time Styles Hook** (12 tests): Performance-optimized style updates (2 tests failing due to transition mocking)
 - 🚧 **Interaction Controller Hook** (4 tests): Pan/zoom controller (2 tests failing due to mock setup)
@@ -142,7 +169,7 @@ All tests use `@/` path aliases for consistent imports and run in jsdom environm
 - **Edge Case Coverage**: Extensive testing for boundary conditions, invalid coordinates, and viewport edge cases
 - **Component Integration**: Full workflow testing from element click to popup display with proper state coordination
 
-**Test Status Summary:** 297 passing, 50 failing (347 total tests across 24 test files)
+**Test Status Summary:** 322 passing, 50 failing (372 total tests across 27 test files)
 
 **Current Development Focus:** Measurement tools implementation (Task 9.1) with MeasurementToolbar component in active development
 
@@ -322,6 +349,50 @@ interface RealTimeStylesHook {
 // - Memory Management: Automatic cleanup of pending updates and timeouts
 ```
 
+#### useExport (`src/hooks/useExport.ts`)
+Comprehensive export hook for programmatic export functionality with error handling and progress tracking:
+
+```typescript
+interface UseExportOptions {
+  onSuccess?: (format: ExportFormat, blob: Blob) => void;  // Success callback
+  onError?: (error: Error) => void;                        // Error callback
+  autoDownload?: boolean;                                  // Auto-download exported files
+}
+
+interface UseExportReturn {
+  exportView: (svgElement: SVGSVGElement, format: ExportFormat, options?: Partial<ExportOptions>) => Promise<Blob | null>;
+  isExporting: boolean;                    // Export in progress state
+  exportError: ViewerError | null;        // Current export error
+  clearError: () => void;                  // Clear error state
+  downloadBlob: (blob: Blob, filename?: string) => void;  // Manual download utility
+  generateFilename: (format: ExportFormat, prefix?: string) => string; // Filename generation
+}
+
+// Key Features:
+// - Programmatic Export: Direct export functionality for integration with other components
+// - Format Support: PNG, SVG, and PDF export with format-specific options
+// - Progress Tracking: Real-time export progress with loading states
+// - Error Handling: Comprehensive error management with typed error objects
+// - Auto-download: Optional automatic file download on successful export
+// - Kiro Integration: Built-in export event emission for monitoring and analytics
+// - Transform Integration: Automatic inclusion of current viewer transform for accurate scale bars
+// - Callback Support: Success and error callbacks for custom handling
+
+// Export Options:
+// - includeScaleBar: Add scale reference to exported image
+// - includeNorthArrow: Add directional indicator to exported image
+// - resolution: PNG resolution multiplier (1x, 2x, 3x)
+// - paperSize: PDF paper size (A0, A1, A2, A3, A4)
+// - orientation: PDF orientation (portrait, landscape)
+// - transform: Current viewer transform for accurate annotations
+
+// Usage Patterns:
+// - Component Integration: Used by ExportDialog for UI-driven exports
+// - Programmatic Export: Direct usage for automated export workflows
+// - Batch Export: Multiple format export with progress tracking
+// - Custom Workflows: Integration with measurement tools and configuration presets
+```
+
 ### Core Components
 
 #### StylingPanel (`src/components/StylingPanel.tsx`)
@@ -465,6 +536,122 @@ interface MeasurementToolbarProps {
 
 // Status: Component file created (currently contains placeholder content), 
 //         full implementation in progress as part of task 9.1 (measurement mode controller)
+```
+
+#### MeasurementController (`src/components/MeasurementController.tsx`)
+Core measurement interaction controller that manages measurement mode functionality and visual overlays:
+
+```typescript
+interface MeasurementControllerProps {
+  svgRef: React.RefObject<SVGSVGElement | null>;           // Reference to SVG element
+  onMeasurementComplete?: (measurement: Measurement) => void; // Callback for completed measurements
+}
+
+// Key Features:
+// - Interactive measurement mode with click-based point selection
+// - Real-time visual overlays for active and completed measurements
+// - Coordinate transformation from screen to world coordinates
+// - Support for distance (2-point) and area (polygon) measurements
+// - Keyboard shortcuts (Escape to cancel active measurement)
+// - Visual feedback with crosshair cursor and measurement mode indicators
+// - Integration with measurement store for state management
+// - Event handling with proper propagation control to avoid conflicts
+
+// Measurement Workflow:
+// - Distance: Click two points to create linear measurement with automatic completion
+// - Area: Click multiple points to create polygon, double-click or manual finish to complete
+// - Active measurements show preview with dashed lines and semi-transparent fills
+// - Completed measurements display with solid styling and measurement labels
+
+// Visual Elements:
+// - Measurement lines with dashed stroke styling (#ff6b35 color)
+// - Measurement points as circles with white stroke borders
+// - Measurement labels with background rectangles for readability
+// - Area measurements with semi-transparent polygon fills
+// - Active measurement previews with reduced opacity
+
+// Integration Features:
+// - Zustand measurement store integration for state persistence
+// - Coordinate transformation utilities (inverseTransformPoint) for accurate positioning
+// - D3.js-based SVG overlay rendering with efficient DOM manipulation
+// - Event listener management with proper cleanup and mode switching
+// - Visual mode indicators (outline styling and cursor changes)
+
+// Event Handling:
+// - Click events for point selection with coordinate transformation
+// - Double-click events for area measurement completion
+// - Keyboard events for measurement cancellation (Escape key)
+// - Proper event propagation control to prevent conflicts with element selection
+// - Automatic event listener attachment/detachment based on measurement mode state
+
+// Performance Optimizations:
+// - Efficient overlay rendering with selective DOM updates
+// - Proper cleanup of event listeners and DOM elements
+// - Minimal re-renders through optimized useCallback and useEffect dependencies
+// - Non-interfering overlay container with pointer-events: none styling
+```
+
+#### ExportButton (`src/components/ExportButton.tsx`)
+Configurable export button component that triggers the export dialog:
+
+```typescript
+interface ExportButtonProps {
+  svgRef: React.RefObject<SVGSVGElement | null>;  // Reference to SVG element for export
+  className?: string;                             // Additional CSS classes
+  variant?: 'primary' | 'secondary' | 'icon';    // Button style variant
+  size?: 'sm' | 'md' | 'lg';                     // Button size
+  disabled?: boolean;                             // Disabled state
+}
+
+// Key Features:
+// - Multiple button variants (primary, secondary, icon-only)
+// - Configurable sizes with responsive design
+// - Integrated export icon with accessibility support
+// - Disabled state handling with visual feedback
+// - Opens ExportDialog on click with proper state management
+// - Tailwind CSS styling with hover and focus states
+// - Keyboard navigation support with proper focus management
+```
+
+#### ExportDialog (`src/components/ExportDialog.tsx`)
+Comprehensive export configuration dialog with format selection and options:
+
+```typescript
+interface ExportDialogProps {
+  isOpen: boolean;                                // Dialog visibility state
+  onClose: () => void;                           // Close callback
+  svgRef: React.RefObject<SVGSVGElement | null>; // SVG element reference
+  className?: string;                            // Additional CSS classes
+}
+
+// Key Features:
+// - Format selection: PNG, SVG, PDF with format-specific options
+// - PNG options: Resolution scaling (1x, 2x, 3x for high DPI displays)
+// - PDF options: Paper size (A0-A4) and orientation (portrait/landscape)
+// - Annotation options: Scale bar and north arrow inclusion toggles
+// - Current view information: Zoom level and visible layer count display
+// - Real-time export progress with loading states and error handling
+// - Keyboard shortcuts: Escape key to close, Enter to export
+// - Click-outside-to-close functionality with backdrop handling
+// - Comprehensive error display with user-friendly messages
+// - Integration with Kiro hooks for export event tracking
+
+// Export Process:
+// - Validates SVG element availability before export
+// - Applies current viewer transform state for accurate scale bars
+// - Generates timestamped filenames automatically
+// - Triggers automatic download on successful export
+// - Provides detailed error messages for troubleshooting
+// - Emits export events for monitoring and analytics
+
+// UI Components:
+// - Format selection grid with visual format indicators
+// - Conditional options panels based on selected format
+// - Annotation checkboxes with clear labeling
+// - Current view status panel showing export context
+// - Progress indicators during export process
+// - Error display panel with actionable error messages
+// - Action buttons with proper disabled states
 ```
 
 #### LayerControlPanel (`src/components/LayerControlPanel.tsx`)
@@ -659,22 +846,103 @@ Preset management system with import/export functionality:
 interface ConfigurationStore {
   presets: ConfigurationPreset[];
   activePresetId: string | null;
+  configurationError: ViewerError | null;
   
   // Preset management
-  savePreset: (name: string, description?: string) => void;
+  savePreset: (name: string, description?: string, config?: Partial<ConfigurationPreset['config']>) => void;
   loadPreset: (id: string) => ConfigurationPreset | null;
   deletePreset: (id: string) => void;
   duplicatePreset: (id: string, newName: string) => void;
+  renamePreset: (id: string, newName: string) => void;
+  
+  // Preset operations
+  applyPreset: (id: string) => ConfigurationPreset | null;
+  setActivePreset: (id: string | null) => void;
+  getPresetById: (id: string) => ConfigurationPreset | undefined;
   
   // Import/Export
   exportPreset: (id: string) => string | null;
   importPreset: (presetData: string) => boolean;
   exportAllPresets: () => string;
+  importPresets: (presetsData: string) => boolean;
   
   // Validation and search
   validatePreset: (preset: Partial<ConfigurationPreset>) => boolean;
   searchPresets: (query: string) => ConfigurationPreset[];
+  
+  // Error handling
+  clearConfigurationError: () => void;
 }
+```
+
+### Configuration Management Components
+
+#### PresetManager (`src/components/PresetManager.tsx`)
+Complete configuration preset management UI component with save/load functionality:
+
+```typescript
+interface PresetManagerProps {
+  className?: string;
+}
+
+// Key Features:
+// - Save current viewer configuration as named presets with optional descriptions
+// - Load saved presets with automatic application to viewer state
+// - Preset management operations (rename, duplicate, delete) with confirmation dialogs
+// - Search and filter presets by name and description
+// - Error handling with user-friendly error messages and recovery options
+// - Modal dialogs for save/load operations with proper keyboard navigation
+// - Integration with configuration store for persistence and state management
+
+// Save Functionality:
+// - Captures current viewer state (visible layers, style overrides, transform)
+// - Modal dialog with preset name (required) and description (optional) fields
+// - Real-time validation with disabled save button for empty names
+// - Automatic preset activation after successful save
+// - Error display for validation failures or save errors
+
+// Load Functionality:
+// - Searchable preset list with creation/update timestamps
+// - Preview of preset details including name, description, and metadata
+// - One-click preset loading with immediate viewer state application
+// - Active preset indicator showing currently applied configuration
+// - Batch operations for preset management (rename, duplicate, delete)
+
+// Preset Management:
+// - Rename presets with inline prompt dialogs
+// - Duplicate presets with customizable names (auto-suggests "Copy" suffix)
+// - Delete presets with confirmation dialogs to prevent accidental removal
+// - Search functionality with real-time filtering by name and description
+// - Chronological sorting with most recently updated presets first
+
+// Integration Features:
+// - Zustand configuration store integration for state persistence
+// - Automatic viewer store updates when loading presets
+// - Error boundary handling with graceful error recovery
+// - localStorage persistence through configuration store
+// - Cross-component state synchronization for active preset tracking
+
+// UI Components:
+// - Main control buttons (Save Preset, Load Preset) with distinct styling
+// - Active preset display panel showing currently applied configuration
+// - Save dialog with form validation and keyboard shortcuts (Enter to save, Escape to cancel)
+// - Load dialog with searchable preset list and management actions
+// - Error display panel with dismissible error messages
+// - Responsive design with mobile-friendly modal dialogs
+
+// State Management:
+// - Captures visible layers as array for serialization compatibility
+// - Converts style overrides Map to plain object for JSON storage
+// - Preserves current transform state (pan, zoom, rotation)
+// - Applies loaded presets by updating viewer store state directly
+// - Maintains active preset tracking for UI feedback
+
+// Error Handling:
+// - Configuration validation errors with specific error messages
+// - Preset not found errors with helpful guidance
+// - Save/load operation failures with retry suggestions
+// - Network/storage errors with fallback options
+// - User input validation with real-time feedback
 ```
 
 ### Core Utilities
@@ -789,6 +1057,75 @@ export const globalStyleManager: StyleManager;
 - **Batch Operations**: Optimizes multiple rapid style changes into single DOM updates
 - **Transition Effects**: Provides smooth visual feedback for style modifications
 
+#### Export Utils (`src/utils/exportUtils.ts`)
+Comprehensive export utility class for generating PNG, SVG, and PDF files with annotations and metadata:
+
+```typescript
+class ExportUtils {
+  // Core export methods
+  static async exportToPNG(svgElement: SVGSVGElement, options: ExportOptions & { resolution?: number }): Promise<Blob>;
+  static async exportToSVG(svgElement: SVGSVGElement, options: ExportOptions): Promise<Blob>;
+  static async exportToPDF(svgElement: SVGSVGElement, options: ExportOptions & { paperSize?: string; orientation?: string }): Promise<Blob>;
+  
+  // Utility methods
+  static downloadBlob(blob: Blob, filename: string): void;
+  static getFileExtension(format: ExportFormat): string;
+  static generateFilename(format: ExportFormat, prefix?: string): string;
+}
+
+interface ExportOptions {
+  format: 'png' | 'svg' | 'pdf';     // Export format
+  includeScaleBar: boolean;          // Include scale reference
+  includeNorthArrow: boolean;        // Include north arrow
+  resolution?: number;               // PNG resolution multiplier (1-5x)
+  paperSize?: string;                // PDF paper size (A0-A4)
+  orientation?: string;              // PDF orientation (portrait/landscape)
+  transform?: Transform;             // Current viewer transform for scale calculations
+}
+```
+
+**PNG Export Features:**
+- **Canvas Rendering**: High-quality raster export using HTML5 Canvas API
+- **Resolution Scaling**: Configurable DPI with 1x to 5x resolution multipliers
+- **Size Validation**: Automatic size limit checking (16MP maximum) for memory safety
+- **Error Handling**: Comprehensive validation with detailed error messages
+- **Background**: White background with proper alpha channel handling
+- **Timeout Protection**: 10-second timeout for large image processing
+
+**SVG Export Features:**
+- **Vector Preservation**: Maintains full vector quality with scalable output
+- **Namespace Handling**: Proper XML namespaces and declarations
+- **Metadata Inclusion**: Export timestamp and application information
+- **Style Preservation**: Maintains all current styling and transformations
+- **Annotation Support**: Optional scale bars and north arrows as vector elements
+
+**PDF Export Features:**
+- **Paper Size Support**: Standard paper sizes from A0 to A4
+- **Orientation Options**: Portrait and landscape orientations
+- **High Resolution**: 2x resolution PNG embedded for quality
+- **Basic PDF Structure**: Simple PDF format with embedded raster image
+- **Metadata**: PDF document properties and creation information
+
+**Annotation System:**
+- **Scale Bar**: Dynamic scale calculation with appropriate units (m/km)
+- **Visual Design**: Professional styling with alternating segments and clear labeling
+- **Smart Positioning**: Automatic placement in bottom-left corner with background
+- **Unit Conversion**: Automatic meter/kilometer conversion based on scale
+- **North Arrow**: Compass indicator with professional styling in top-right corner
+
+**Error Handling:**
+- **Input Validation**: Comprehensive SVG element and parameter validation
+- **Size Limits**: Memory-safe export with configurable size restrictions
+- **Browser Compatibility**: Graceful fallbacks for unsupported features
+- **Detailed Messages**: User-friendly error messages with troubleshooting guidance
+- **Timeout Management**: Prevents browser freezing on large exports
+
+**Performance Optimizations:**
+- **Memory Management**: Automatic cleanup of temporary objects and URLs
+- **Efficient Processing**: Optimized Canvas operations and DOM manipulation
+- **Progress Tracking**: Built-in timing and size metrics for monitoring
+- **Resource Cleanup**: Proper disposal of temporary resources and event listeners
+
 ### Core Interfaces
 
 #### IFCElement
@@ -824,11 +1161,12 @@ interface ViewerState {
 ```typescript
 interface ExportOptions {
   format: 'png' | 'svg' | 'pdf';     // Export format
-  includeScaleBar: boolean;          // Include scale reference
-  includeNorthArrow: boolean;        // Include north arrow
-  resolution?: number;               // PNG resolution (DPI)
-  paperSize?: 'A4' | 'A3' | 'A2' | 'A1' | 'A0'; // PDF paper size
-  orientation?: 'portrait' | 'landscape';         // PDF orientation
+  includeScaleBar: boolean;          // Include scale reference with dynamic units
+  includeNorthArrow: boolean;        // Include directional compass indicator
+  resolution?: number;               // PNG resolution multiplier (1-5x for high DPI)
+  paperSize?: 'A4' | 'A3' | 'A2' | 'A1' | 'A0'; // PDF paper size options
+  orientation?: 'portrait' | 'landscape';         // PDF page orientation
+  transform?: Transform;             // Current viewer transform for accurate scale bars
 }
 ```
 
@@ -898,6 +1236,7 @@ interactive-planview/
 │   ├── components/          # React components
 │   │   ├── SVGRenderer.tsx      # D3.js-based SVG rendering engine (✅ Complete)
 │   │   ├── LayerControlPanel.tsx # Layer management UI component (✅ Complete)
+│   │   ├── PresetManager.tsx    # Configuration preset management UI (✅ Complete)
 │   │   ├── MeasurementToolbar.tsx # Measurement tools UI component (🚧 In Development - Task 9.1)
 │   │   ├── EventMonitor.tsx     # Kiro event monitoring component
 │   │   └── PlanviewLoader.tsx   # SVG planview loading component
@@ -959,6 +1298,7 @@ interactive-planview/
 - **Smooth transitions and viewport management**
 - **Element information display system with interactive popups**
 - **Selection system integration with comprehensive test coverage**
+- **Configuration management system with preset save/load functionality**
 - Comprehensive test suite with 241 passing tests (259 total)
 - Kiro integration hooks for AI assistance
 
@@ -986,7 +1326,17 @@ This project includes comprehensive Kiro Agent Hooks for AI-assisted development
 
 ### Recent Changes
 
-**Style Persistence Implementation (Latest)**
+**Configuration Management Implementation (Latest)**
+- **PresetManager Component**: Complete UI component for configuration preset management with save/load functionality
+- **Modal Dialogs**: Save and load dialogs with proper keyboard navigation and form validation
+- **Preset Operations**: Full CRUD operations including rename, duplicate, delete with confirmation dialogs
+- **Search Functionality**: Real-time preset search and filtering by name and description
+- **Error Handling**: Comprehensive error display and recovery with user-friendly messages
+- **State Integration**: Seamless integration with configuration store and viewer store for state management
+- **UI/UX Features**: Active preset indicators, chronological sorting, and responsive modal design
+- **Validation**: Real-time form validation with disabled states for invalid inputs
+
+**Style Persistence Implementation**
 - **New Hook**: Added `useStylePersistence` hook for automatic style saving/loading with localStorage
 - **Version Control**: Implemented storage format versioning with backward compatibility checks
 - **Expiration Handling**: Added 30-day expiration for stored style preferences
@@ -1080,8 +1430,14 @@ This application follows the implementation plan defined in `.kiro/specs/interac
 - Custom event system for cross-component communication
 - Comprehensive test coverage for UI interactions
 
-**Phase 5: Advanced Features (📋 Planned)**
+**Phase 5: Configuration Management (✅ Complete)**
+- Complete preset management system with save/load functionality
+- Configuration store with import/export capabilities
+- PresetManager UI component with search and management operations
+- Error handling and validation for configuration operations
+- localStorage persistence with automatic state rehydration
+
+**Phase 6: Advanced Features (📋 Planned)**
 - Measurement tools and overlays
 - Export functionality (PNG, SVG, PDF)
-- Configuration management and presets
 - Multi-storey navigation and comparison

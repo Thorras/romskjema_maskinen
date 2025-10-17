@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useEffect, useCallback, forwardRef } from 'react';
 import * as d3 from 'd3';
 import { useViewerStore } from '@/store/viewerStore';
 import { useInteractionController } from '@/hooks/useInteractionController';
@@ -21,7 +21,7 @@ interface SVGRendererProps {
   zoomStep?: number;
 }
 
-export const SVGRenderer: React.FC<SVGRendererProps> = ({
+export const SVGRenderer = forwardRef<SVGSVGElement, SVGRendererProps>(({
   elements,
   width,
   height,
@@ -33,8 +33,18 @@ export const SVGRenderer: React.FC<SVGRendererProps> = ({
   minZoom = 0.1,
   maxZoom = 10,
   zoomStep = 1.2,
-}) => {
+}, ref) => {
   const svgRef = useRef<SVGSVGElement>(null);
+  
+  // Combine external ref with internal ref
+  const combinedRef = useCallback((node: SVGSVGElement | null) => {
+    svgRef.current = node;
+    if (typeof ref === 'function') {
+      ref(node);
+    } else if (ref) {
+      ref.current = node;
+    }
+  }, [ref]);
   const spatialIndexRef = useRef<SpatialIndex | null>(null);
   const elementsMapRef = useRef<Map<string, IFCElement>>(new Map());
   const styleManagerRef = useRef<StyleManager | null>(null);
@@ -362,7 +372,7 @@ export const SVGRenderer: React.FC<SVGRendererProps> = ({
 
   return (
     <svg
-      ref={svgRef}
+      ref={combinedRef}
       width={width}
       height={height}
       className={`svg-renderer ${className}`}
@@ -379,6 +389,8 @@ export const SVGRenderer: React.FC<SVGRendererProps> = ({
       onClick={handleClick}
     />
   );
-};
+});
+
+SVGRenderer.displayName = 'SVGRenderer';
 
 export default SVGRenderer;

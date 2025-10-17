@@ -1,17 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { PlanviewLoader } from './components/PlanviewLoader';
 import { EventMonitor } from './components/EventMonitor';
 import { StylingPanel } from './components/StylingPanel';
 import { ElementInfoManager } from './components/ElementInfoManager';
 import { SVGRenderer } from './components/SVGRenderer';
 import { LayerControlPanel } from './components/LayerControlPanel';
+import { MeasurementToolbar } from './components/MeasurementToolbar';
+import { MeasurementController } from './components/MeasurementController';
+import { ExportButton } from './components/ExportButton';
 import { useKiroHooks } from './hooks/useKiroHooks';
 import { useViewerStore } from './store/viewerStore';
 import { extractIFCClasses } from './utils/ifcClasses';
-import type { IFCElement } from './types';
+import type { IFCElement, Measurement } from './types';
 
 function App() {
   const [svgElement, setSvgElement] = useState<SVGElement | null>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
   const [demoElements] = useState<IFCElement[]>([
     {
       guid: 'wall-001',
@@ -132,15 +136,19 @@ function App() {
   };
 
   const simulateExport = () => {
-    hooks.onExportStart('PNG');
+    hooks.onExportStart('png');
     
     setTimeout(() => {
       if (Math.random() > 0.7) {
-        hooks.onExportError('PNG', new Error('Export failed due to memory limit'));
+        hooks.onExportError('png', new Error('Export failed due to memory limit'));
       } else {
-        hooks.onExportComplete('PNG', 1024 * 1024); // 1MB
+        hooks.onExportComplete('png', 1024 * 1024); // 1MB
       }
     }, 1500);
+  };
+
+  const handleMeasurementComplete = (measurement: Measurement) => {
+    hooks.onMeasurementCompleted(measurement.type, measurement.value, measurement.unit);
   };
 
   return (
@@ -161,17 +169,27 @@ function App() {
             
             {/* Interactive Demo Viewer */}
             <div className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-lg font-medium mb-4">Interactive Planview Demo</h3>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-medium">Interactive Planview Demo</h3>
+                <ExportButton svgRef={svgRef} variant="secondary" size="sm" />
+              </div>
               <p className="text-sm text-gray-600 mb-4">
                 Click on elements to see their information popup. Try the wall, door, window, or floor slab.
               </p>
               <ElementInfoManager className="border border-gray-200 rounded">
-                <SVGRenderer
-                  elements={demoElements}
-                  width={400}
-                  height={300}
-                  className="w-full"
-                />
+                <div className="relative">
+                  <SVGRenderer
+                    ref={svgRef}
+                    elements={demoElements}
+                    width={400}
+                    height={300}
+                    className="w-full"
+                  />
+                  <MeasurementController
+                    svgRef={svgRef}
+                    onMeasurementComplete={handleMeasurementComplete}
+                  />
+                </div>
               </ElementInfoManager>
             </div>
             
@@ -188,6 +206,8 @@ function App() {
 
           <div className="space-y-6">
             <LayerControlPanel />
+            
+            <MeasurementToolbar />
             
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-lg font-medium mb-4">Demo Actions</h3>

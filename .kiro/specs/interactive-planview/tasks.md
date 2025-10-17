@@ -209,9 +209,9 @@ The following tasks represent the remaining work to complete the interactive pla
 
     - _Requirements: PV-R4.1, PV-R4.2_
 
-- [-] 9. Implement measurement tools
+- [x] 9. Implement measurement tools
 
-  - [-] 9.1 Create measurement mode controller
+  - [x] 9.1 Create measurement mode controller
 
     - Add measurement mode toggle functionality
     - Implement point-to-point distance measurement using coordinate utilities
@@ -219,22 +219,23 @@ The following tasks represent the remaining work to complete the interactive pla
     - Connect to measurement store in Zustand
     - _Requirements: PV-R5.1, PV-R5.2_
 
-  - [ ] 9.2 Add area measurement and measurement management
+  - [x] 9.2 Add area measurement and measurement management
 
     - Implement polygon area measurement using coordinate utilities
     - Create measurement overlay rendering system with D3.js
     - Add measurement deletion and management
     - _Requirements: PV-R5.3, PV-R5.4_
 
-  - [ ] 9.3 Write tests for measurement functionality
+  - [x] 9.3 Write tests for measurement functionality
+
     - Test distance and area calculation accuracy
     - Test measurement overlay rendering
     - Test measurement management operations
     - _Requirements: PV-R5.2, PV-R5.3_
 
-- [ ] 10. Build export functionality
+- [x] 10. Build export functionality
 
-  - [ ] 10.1 Implement view export system
+  - [x] 10.1 Implement view export system
 
     - Create PNG export using Canvas API
     - Add SVG export with current view state
@@ -242,36 +243,38 @@ The following tasks represent the remaining work to complete the interactive pla
     - Integrate with Kiro hooks for export tracking
     - _Requirements: PV-R6.1, PV-R6.2_
 
-  - [ ] 10.2 Add export options and metadata
+  - [x] 10.2 Add export options and metadata
 
     - Include scale bar and north arrow in exports
     - Respect current zoom and visible layers
     - Add error handling for export failures
     - _Requirements: PV-R6.2, PV-R6.3, PV-R6.4_
 
-  - [ ] 10.3 Write tests for export functionality
+  - [x] 10.3 Write tests for export functionality
+
     - Test various export formats and options
     - Test export with different view states
     - Test error handling for export failures
     - _Requirements: PV-R6.1, PV-R6.4_
 
-- [ ] 11. Implement configuration management
+- [x] 11. Implement configuration management
 
-  - [ ] 11.1 Create preset save and load system
+  - [x] 11.1 Create preset save and load system
 
     - Implement configuration serialization using existing configuration store
     - Add local storage for saved presets
     - Create preset management UI
     - _Requirements: PV-R7.1, PV-R7.2_
 
-  - [ ] 11.2 Add preset administration features
+  - [x] 11.2 Add preset administration features
 
     - Implement preset deletion and renaming
     - Add preset import/export functionality
     - Create default configuration restoration
     - _Requirements: PV-R7.3, PV-R7.4_
 
-  - [ ] 11.3 Write tests for configuration management
+  - [x] 11.3 Write tests for configuration management
+
     - Test preset saving and loading
     - Test configuration serialization accuracy
     - Test preset management operations

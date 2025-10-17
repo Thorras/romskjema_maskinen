@@ -2,23 +2,17 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { useMeasurementStore } from '@/store/measurementStore';
 import { useViewerStore } from '@/store/viewerStore';
-import { transformPoint, inverseTransformPoint, calculateDistance } from '@/utils/coordinates';
+import { inverseTransformPoint } from '@/utils/coordinates';
 import type { Point, Measurement } from '@/types';
 
 interface MeasurementControllerProps {
-  svgRef: React.RefObject<SVGSVGElement>;
-  width: number;
-  height: number;
+  svgRef: React.RefObject<SVGSVGElement | null>;
   onMeasurementComplete?: (measurement: Measurement) => void;
-  className?: string;
 }
 
 export const MeasurementController: React.FC<MeasurementControllerProps> = ({
   svgRef,
-  width,
-  height,
   onMeasurementComplete,
-  className = '',
 }) => {
   const overlayRef = useRef<SVGGElement | null>(null);
   const isClickHandlerAttachedRef = useRef(false);
@@ -27,6 +21,7 @@ export const MeasurementController: React.FC<MeasurementControllerProps> = ({
   const measurementMode = useMeasurementStore((state) => state.measurementMode);
   const activeMeasurement = useMeasurementStore((state) => state.activeMeasurement);
   const measurements = useMeasurementStore((state) => state.measurements);
+  const nextMeasurementType = useMeasurementStore((state) => state.nextMeasurementType);
   const startMeasurement = useMeasurementStore((state) => state.startMeasurement);
   const addPointToMeasurement = useMeasurementStore((state) => state.addPointToMeasurement);
   const finishMeasurement = useMeasurementStore((state) => state.finishMeasurement);
@@ -52,8 +47,8 @@ export const MeasurementController: React.FC<MeasurementControllerProps> = ({
     const worldPoint = inverseTransformPoint(screenPoint, transform);
 
     if (!activeMeasurement) {
-      // Start new distance measurement
-      startMeasurement('distance', worldPoint);
+      // Start new measurement using the selected type
+      startMeasurement(nextMeasurementType, worldPoint);
     } else {
       // Add point to active measurement
       addPointToMeasurement(worldPoint);
@@ -62,6 +57,7 @@ export const MeasurementController: React.FC<MeasurementControllerProps> = ({
       if (activeMeasurement.type === 'distance' && activeMeasurement.points.length >= 1) {
         finishMeasurement();
       }
+      // For area measurements, continue adding points (finish on double-click or manual finish)
     }
   }, [measurementMode, activeMeasurement, transform, startMeasurement, addPointToMeasurement, finishMeasurement]);
 
@@ -146,7 +142,7 @@ export const MeasurementController: React.FC<MeasurementControllerProps> = ({
 
       if (measurement.type === 'distance') {
         // Render distance measurement line
-        const line = measurementGroup.append('line')
+        measurementGroup.append('line')
           .attr('x1', measurement.points[0].x)
           .attr('y1', measurement.points[0].y)
           .attr('x2', measurement.points[1].x)
@@ -157,7 +153,7 @@ export const MeasurementController: React.FC<MeasurementControllerProps> = ({
           .attr('opacity', 0.8);
 
         // Add measurement points
-        measurement.points.forEach((point, index) => {
+        measurement.points.forEach((point) => {
           measurementGroup.append('circle')
             .attr('cx', point.x)
             .attr('cy', point.y)
@@ -308,7 +304,7 @@ export const MeasurementController: React.FC<MeasurementControllerProps> = ({
     if (!svgRef.current) return;
 
     const svg = d3.select(svgRef.current);
-    let overlayContainer = svg.select('.measurement-overlay');
+    let overlayContainer = svg.select<SVGGElement>('.measurement-overlay');
     
     if (overlayContainer.empty()) {
       // Create overlay container if it doesn't exist
@@ -317,7 +313,7 @@ export const MeasurementController: React.FC<MeasurementControllerProps> = ({
         .style('pointer-events', 'none'); // Prevent interference with interactions
     }
 
-    overlayRef.current = overlayContainer.node() as SVGGElement;
+    overlayRef.current = overlayContainer.node();
   }, []);
 
   // Re-render overlays when measurements or transform change

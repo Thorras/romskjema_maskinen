@@ -8,12 +8,14 @@ interface MeasurementStore {
   measurementMode: boolean;
   activeMeasurement: Measurement | null;
   measurementError: ViewerError | null;
+  nextMeasurementType: 'distance' | 'area';
   
   // Measurement mode actions
   enableMeasurementMode: () => void;
   disableMeasurementMode: () => void;
   toggleMeasurementMode: () => void;
   setMeasurementMode: (enabled: boolean) => void;
+  setNextMeasurementType: (type: 'distance' | 'area') => void;
   
   // Measurement creation actions
   startMeasurement: (type: 'distance' | 'area', firstPoint: Point) => void;
@@ -86,6 +88,7 @@ export const useMeasurementStore = create<MeasurementStore>()(
       measurementMode: false,
       activeMeasurement: null,
       measurementError: null,
+      nextMeasurementType: 'distance',
       
       // Measurement mode actions
       enableMeasurementMode: () =>
@@ -109,6 +112,11 @@ export const useMeasurementStore = create<MeasurementStore>()(
         set(() => ({
           measurementMode: enabled,
           activeMeasurement: enabled ? get().activeMeasurement : null,
+        })),
+      
+      setNextMeasurementType: (type) =>
+        set(() => ({
+          nextMeasurementType: type,
         })),
       
       // Measurement creation actions
@@ -280,6 +288,7 @@ export const useMeasurementStore = create<MeasurementStore>()(
           measurementMode: false,
           activeMeasurement: null,
           measurementError: null,
+          nextMeasurementType: 'distance',
         })),
     }),
     {
