@@ -1,0 +1,5987 @@
+{
+  "project": {
+    "name": "",
+    "code": "",
+    "start_date": null,
+    "finish_date": null,
+    "calendar": "NO-5d-8h",
+    "timezone": "Europe/Oslo"
+  },
+  "logistics_and_site": {
+    "rigg_drift": {
+      "description": "",
+      "phases": [],
+      "notes": ""
+    },
+    "sha_plan": {
+      "plan_id": "",
+      "link": ""
+    },
+    "lean_takt": {
+      "takt_time_days": null,
+      "sequence": [],
+      "notes": ""
+    }
+  },
+  "zones": [
+    {
+      "zone_id": "A",
+      "zone": "Sone A",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 1,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 3.5,
+            "unit": "months"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-03-19",
+          "predecessors": [],
+          "resources": [],
+          "notes": "Åpne dekker (125 m2), vegger (527 m2), lettriving på etg - Riving (høye dekker) - Riving (5,3hm vegger)",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 2,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 2.0,
+            "unit": "days"
+          },
+          "start": "2026-03-20",
+          "finish": "2026-03-23",
+          "predecessors": [
+            {
+              "taskRef": 112,
+              "type": "FS",
+              "lag": "P0D"
+            },
+            {
+              "taskRef": 111,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Murer"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 3,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Tømmer",
+          "duration": {
+            "value": 35.0,
+            "unit": "days"
+          },
+          "start": "2026-03-24",
+          "finish": "2026-05-18",
+          "predecessors": [
+            {
+              "taskRef": 113,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "BSO"
+          ],
+          "notes": "2493,6 timer (1d oppmåling-2d stål - 2d gips (enkling) - 4d gips (lukking) = 72 timer)",
+          "work": {
+            "value": 2493.6,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 4,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2026-05-19",
+          "finish": "2026-06-02",
+          "predecessors": [
+            {
+              "taskRef": 114,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Gulvsparkel"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 5,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 55.0,
+            "unit": "days"
+          },
+          "start": "2026-01-16",
+          "finish": "2026-04-07",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 6,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Overflater",
+          "duration": {
+            "value": 15.0,
+            "unit": "days"
+          },
+          "start": "2026-01-16",
+          "finish": "2026-02-05",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 7,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Tak",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2026-01-16",
+          "finish": "2026-01-22",
+          "predecessors": [
+            {
+              "taskRef": 111,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 8,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Vegg",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2026-01-23",
+          "finish": "2026-01-29",
+          "predecessors": [
+            {
+              "taskRef": 118,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 9,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Gulv",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2026-01-30",
+          "finish": "2026-02-05",
+          "predecessors": [
+            {
+              "taskRef": 119,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 10,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Teknisk Montasje",
+          "duration": {
+            "value": 40.0,
+            "unit": "days"
+          },
+          "start": "2026-02-06",
+          "finish": "2026-04-07",
+          "predecessors": [
+            {
+              "taskRef": 120,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Energima"
+          ],
+          "notes": "Største komponent 5000kg",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": {
+              "weight_kg": 5000,
+              "dimensions_mm": null,
+              "notes": "Største komponent 5000kg"
+            }
+          },
+          "children": []
+        },
+        {
+          "task_id": 11,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 30.0,
+            "unit": "days"
+          },
+          "start": "2026-06-03",
+          "finish": "2026-08-04",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 12,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Rør",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-06-03",
+          "finish": "2026-06-16",
+          "predecessors": [
+            {
+              "taskRef": 115,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 13,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Ventilasjon",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-06-17",
+          "finish": "2026-06-30",
+          "predecessors": [
+            {
+              "taskRef": 123,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Ventilasjon"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 14,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Elektro",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-07-01",
+          "finish": "2026-08-04",
+          "predecessors": [
+            {
+              "taskRef": 124,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Elektro"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 15,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Overflater",
+          "duration": {
+            "value": 30.0,
+            "unit": "days"
+          },
+          "start": "2026-08-05",
+          "finish": "2026-09-15",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 16,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Vegg",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-08-05",
+          "finish": "2026-08-18",
+          "predecessors": [
+            {
+              "taskRef": 125,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 17,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Tak",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-08-19",
+          "finish": "2026-09-01",
+          "predecessors": [
+            {
+              "taskRef": 127,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 18,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Gulv",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-09-02",
+          "finish": "2026-09-15",
+          "predecessors": [
+            {
+              "taskRef": 128,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 19,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-09-16",
+          "finish": "2026-09-29",
+          "predecessors": [
+            {
+              "taskRef": 129,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 20,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-09-02",
+          "finish": "2026-09-15",
+          "predecessors": [
+            {
+              "taskRef": 129,
+              "type": "SS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 21,
+          "wbs": "",
+          "zone": "Sone A",
+          "name": "",
+          "duration": null,
+          "start": null,
+          "finish": null,
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "B",
+      "zone": "Sone B",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 22,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Sone B - Østfløy",
+          "duration": {
+            "value": 504.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2028-02-04",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 23,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2026-09-11",
+          "finish": "2026-09-11",
+          "predecessors": [
+            {
+              "taskRef": 99,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 24,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "\"Råbygg\"",
+          "duration": {
+            "value": 83.0,
+            "unit": "days"
+          },
+          "start": "2026-09-14",
+          "finish": "2027-01-18",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 25,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Nye Statiske Konstruksjoner + riving",
+          "duration": {
+            "value": 2.0,
+            "unit": "months"
+          },
+          "start": "2026-09-14",
+          "finish": "2026-11-06",
+          "predecessors": [
+            {
+              "taskRef": 134,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Inn.Bet"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 26,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2026-11-09",
+          "finish": "2026-11-13",
+          "predecessors": [
+            {
+              "taskRef": 136,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Murer"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 27,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tømmer",
+          "duration": {
+            "value": 28.0,
+            "unit": "days"
+          },
+          "start": "2026-11-16",
+          "finish": "2027-01-04",
+          "predecessors": [
+            {
+              "taskRef": 137,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "BSO"
+          ],
+          "notes": "1996,44 timer (1d oppmåling-2d stål - 2d gips (enkling) - 4d gips (lukking) = 72 timer)",
+          "work": {
+            "value": 1996.44,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 28,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2027-01-05",
+          "finish": "2027-01-18",
+          "predecessors": [
+            {
+              "taskRef": 138,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Gulvsparkel"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 29,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 50.0,
+            "unit": "days"
+          },
+          "start": "2026-09-14",
+          "finish": "2026-11-20",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 30,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Overflater",
+          "duration": {
+            "value": 15.0,
+            "unit": "days"
+          },
+          "start": "2026-09-14",
+          "finish": "2026-10-02",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 31,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tak",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2026-09-14",
+          "finish": "2026-09-18",
+          "predecessors": [
+            {
+              "taskRef": 134,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 32,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Vegg",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2026-09-21",
+          "finish": "2026-09-25",
+          "predecessors": [
+            {
+              "taskRef": 142,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 33,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gulv",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2026-09-28",
+          "finish": "2026-10-02",
+          "predecessors": [
+            {
+              "taskRef": 143,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 34,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Teknisk montasje",
+          "duration": {
+            "value": 35.0,
+            "unit": "days"
+          },
+          "start": "2026-10-05",
+          "finish": "2026-11-20",
+          "predecessors": [
+            {
+              "taskRef": 144,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Energima"
+          ],
+          "notes": "Største komponent 1750 kg (987x2318x2388)",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": {
+              "weight_kg": 1750,
+              "dimensions_mm": [
+                987,
+                2318,
+                2388
+              ],
+              "notes": "Største komponent 1750 kg (987x2318x2388)"
+            }
+          },
+          "children": []
+        },
+        {
+          "task_id": 35,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 30.0,
+            "unit": "days"
+          },
+          "start": "2026-09-14",
+          "finish": "2026-10-23",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 36,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Rør",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-09-14",
+          "finish": "2026-09-25",
+          "predecessors": [
+            {
+              "taskRef": 134,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 37,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Ventilasjon",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-09-28",
+          "finish": "2026-10-09",
+          "predecessors": [
+            {
+              "taskRef": 147,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Ventilasjon"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 38,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Elektro",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2026-10-12",
+          "finish": "2026-10-23",
+          "predecessors": [
+            {
+              "taskRef": 148,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Elektro"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 39,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Overflater",
+          "duration": {
+            "value": 288.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2027-03-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 40,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Vegg",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2027-01-19",
+          "finish": "2027-02-01",
+          "predecessors": [
+            {
+              "taskRef": 135,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 41,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tak",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2027-02-02",
+          "finish": "2027-02-15",
+          "predecessors": [
+            {
+              "taskRef": 151,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 42,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gulv",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2027-02-16",
+          "finish": "2027-03-01",
+          "predecessors": [
+            {
+              "taskRef": 152,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 43,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 44,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 45,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "",
+          "duration": null,
+          "start": null,
+          "finish": null,
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 46,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Sone C - Resepsjonsområdet",
+          "duration": {
+            "value": 504.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2028-02-04",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 47,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2026-01-15",
+          "finish": "2026-01-15",
+          "predecessors": [
+            {
+              "taskRef": 108,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 48,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Råbygg",
+          "duration": {
+            "value": 70.0,
+            "unit": "days"
+          },
+          "start": "2026-01-16",
+          "finish": "2026-04-28",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 49,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 2.0,
+            "unit": "months"
+          },
+          "start": "2026-01-16",
+          "finish": "2026-03-12",
+          "predecessors": [
+            {
+              "taskRef": 158,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 50,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tømmer",
+          "duration": {
+            "value": 16.0,
+            "unit": "days"
+          },
+          "start": "2026-03-13",
+          "finish": "2026-04-08",
+          "predecessors": [
+            {
+              "taskRef": 160,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "BSO"
+          ],
+          "notes": "1152,5 timer",
+          "work": {
+            "value": 1152.5,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 51,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2026-04-09",
+          "finish": "2026-04-22",
+          "predecessors": [
+            {
+              "taskRef": 161,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 52,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 4.0,
+            "unit": "days"
+          },
+          "start": "2026-04-23",
+          "finish": "2026-04-28",
+          "predecessors": [
+            {
+              "taskRef": 162,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 53,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 30.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-01-22",
+          "predecessors": [],
+          "resources": [
+            "Energima"
+          ],
+          "notes": "kun i 5 etg - mindre aggregater",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 54,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Overflater",
+          "duration": {
+            "value": 15.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-19",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 55,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tak",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-05",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 56,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Vegg",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2025-12-08",
+          "finish": "2025-12-12",
+          "predecessors": [
+            {
+              "taskRef": 166,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 57,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gulv",
+          "duration": {
+            "value": 5.0,
+            "unit": "days"
+          },
+          "start": "2025-12-15",
+          "finish": "2025-12-19",
+          "predecessors": [
+            {
+              "taskRef": 167,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 58,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Teknisk montasje",
+          "duration": {
+            "value": 35.0,
+            "unit": "days"
+          },
+          "start": "2025-12-22",
+          "finish": "2026-02-19",
+          "predecessors": [
+            {
+              "taskRef": 168,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [
+            "Energima"
+          ],
+          "notes": "Største komponent 1750 kg (987x2318x2388)",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": {
+              "weight_kg": 1750,
+              "dimensions_mm": [
+                987,
+                2318,
+                2388
+              ],
+              "notes": "Største komponent 1750 kg (987x2318x2388)"
+            }
+          },
+          "children": []
+        },
+        {
+          "task_id": 59,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 60,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 61,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 62,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 63,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 64,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 65,
+          "wbs": "",
+          "zone": "Sone B",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "D",
+      "zone": "Sone D",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 66,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Sone D - Hovedtrapp",
+          "duration": {
+            "value": 504.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2028-02-04",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 67,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2026-10-19",
+          "finish": "2026-10-19",
+          "predecessors": [
+            {
+              "taskRef": 102,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 68,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Riving",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 69,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Riggtiltak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 70,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Stillas",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 71,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Strøm",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 72,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Byggvarme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 73,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Transportvei",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 74,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 75,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Tømmer",
+          "duration": {
+            "value": 11.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-15",
+          "predecessors": [],
+          "resources": [],
+          "notes": "813,5 timer",
+          "work": {
+            "value": 813.5,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 76,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 77,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Flyt u/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 78,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Flyt m/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 79,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 2.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-02",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 80,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 81,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 35.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-01-29",
+          "predecessors": [],
+          "resources": [
+            "Energima"
+          ],
+          "notes": "Største komponent 800kg (706x1400x1727)",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": {
+              "weight_kg": 800,
+              "dimensions_mm": [
+                706,
+                1400,
+                1727
+              ],
+              "notes": "Største komponent 800kg (706x1400x1727)"
+            }
+          },
+          "children": []
+        },
+        {
+          "task_id": 82,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 83,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 84,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 85,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 86,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 87,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 88,
+          "wbs": "",
+          "zone": "Sone D",
+          "name": "",
+          "duration": null,
+          "start": null,
+          "finish": null,
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "E",
+      "zone": "Sone E",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 89,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Sone E - Foredragsfløy",
+          "duration": {
+            "value": 201.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-10-19",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 90,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2026-10-19",
+          "finish": "2026-10-19",
+          "predecessors": [
+            {
+              "taskRef": 103,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 91,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Riving",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 92,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Riggtiltak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 93,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Stillas",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 94,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Strøm",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 95,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Byggvarme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 96,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Transportvei",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 97,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 98,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Tømmer",
+          "duration": {
+            "value": 2.5,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-03",
+          "predecessors": [],
+          "resources": [
+            "BSO"
+          ],
+          "notes": "177 timer",
+          "work": {
+            "value": 177.0,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 99,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 100,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Flyt u/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 101,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Flyt m/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 102,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 103,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 104,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 30.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-01-22",
+          "predecessors": [],
+          "resources": [
+            "Energima"
+          ],
+          "notes": "Største komponent 2000kg (2400x2132x2780)",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": {
+              "weight_kg": 2000,
+              "dimensions_mm": [
+                2400,
+                2132,
+                2780
+              ],
+              "notes": "Største komponent 2000kg (2400x2132x2780)"
+            }
+          },
+          "children": []
+        },
+        {
+          "task_id": 105,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 106,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 107,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 108,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 109,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 110,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 111,
+          "wbs": "",
+          "zone": "Sone E",
+          "name": "",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "F",
+      "zone": "Sone F",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 112,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Sone F - 1973-bygget",
+          "duration": {
+            "value": 40.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-02-05",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 113,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2026-01-16",
+          "finish": "2026-01-16",
+          "predecessors": [
+            {
+              "taskRef": 101,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 114,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Riving",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "Dekker (220m2), vegger (198 m2)",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 115,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Riggtiltak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 116,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Stillas",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 117,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Strøm",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 118,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Byggvarme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 119,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Transportvei",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 120,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 121,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Tømmer",
+          "duration": {
+            "value": 27.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-01-19",
+          "predecessors": [],
+          "resources": [],
+          "notes": "1909 timer",
+          "work": {
+            "value": 1909.0,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 122,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 123,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Flyt u/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 124,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Flyt m/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 125,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 126,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 127,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 40.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-02-05",
+          "predecessors": [],
+          "resources": [
+            "Energima"
+          ],
+          "notes": "Største komponent 1543 kg (987x2318x2388)",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": {
+              "weight_kg": 1543,
+              "dimensions_mm": [
+                987,
+                2318,
+                2388
+              ],
+              "notes": "Største komponent 1543 kg (987x2318x2388)"
+            }
+          },
+          "children": []
+        },
+        {
+          "task_id": 128,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 129,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 130,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 131,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 132,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 133,
+          "wbs": "",
+          "zone": "Sone F",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "G",
+      "zone": "Sone G",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 134,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Sone G - Gårdsrom",
+          "duration": {
+            "value": 26.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-01-16",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 135,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2026-01-16",
+          "finish": "2026-01-16",
+          "predecessors": [
+            {
+              "taskRef": 106,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 136,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Riving",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "Dekker (229 m2), vegger (26m2) --> her er muligens rivingen utvendig.",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 137,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Riggtiltak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 138,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Stillas",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 139,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Strøm",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 140,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Byggvarme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 141,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Transportvei",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 142,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 143,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Tømmer",
+          "duration": {
+            "value": 8.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-10",
+          "predecessors": [],
+          "resources": [],
+          "notes": "598 timer",
+          "work": {
+            "value": 598.0,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 144,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 145,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Flyt u/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 146,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Flyt m/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 147,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 148,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 149,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 150,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 151,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 152,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 153,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 154,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 155,
+          "wbs": "",
+          "zone": "Sone G",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "I",
+      "zone": "Sone I",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 156,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Sone I - Tilbygg Nord",
+          "duration": {
+            "value": 504.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2028-02-04",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 157,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2027-02-23",
+          "finish": "2027-02-23",
+          "predecessors": [
+            {
+              "taskRef": 54,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 158,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Riggtiltak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 159,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Stillas",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 160,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Strøm",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 161,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Byggvarme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 162,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Transportvei",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 163,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Tømmer",
+          "duration": {
+            "value": 40.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2026-02-05",
+          "predecessors": [],
+          "resources": [],
+          "notes": "2897,5 timer",
+          "work": {
+            "value": 2897.5,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 164,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 165,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Flyt u/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 166,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Flyt m/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 167,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 7.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-09",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 168,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 11.0,
+            "unit": "months"
+          },
+          "start": "2027-02-24",
+          "finish": "2028-02-04",
+          "predecessors": [
+            {
+              "taskRef": 271,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 169,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 170,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 171,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 172,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 173,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 174,
+          "wbs": "",
+          "zone": "Sone I",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "J",
+      "zone": "Sone J",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 175,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Sone J - Tilbygg Vest",
+          "duration": {
+            "value": 307.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2027-03-31",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 176,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2027-03-31",
+          "finish": "2027-03-31",
+          "predecessors": [
+            {
+              "taskRef": 60,
+              "type": "FS",
+              "lag": "P0D"
+            }
+          ],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 177,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Riggtiltak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 178,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Stillas",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 179,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Strøm",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 180,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Byggvarme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 181,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Transportvei",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 182,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 183,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Tømmer",
+          "duration": {
+            "value": 14.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-18",
+          "predecessors": [],
+          "resources": [],
+          "notes": "1007,8 timer",
+          "work": {
+            "value": 1007.8,
+            "unit": "hours"
+          },
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 184,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 185,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Flyt u/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 186,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Flyt m/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 187,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 188,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 189,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 190,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 191,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 192,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 193,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 194,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 195,
+          "wbs": "",
+          "zone": "Sone J",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "J",
+      "zone": "Sone I, Sone J",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 196,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Sone I/J - Overgang mellom Tilbygg",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 197,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Tett tak (over)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 198,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Riving",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 199,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Riggtiltak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 200,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Stillas",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 201,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Strøm",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 202,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Byggvarme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 203,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Transportvei",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 204,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Nye Statiske Konstruksjoner",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 205,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Tømmer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 206,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Gulvbehandling (flyt)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 207,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Flyt u/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 208,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Flyt m/varme",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 209,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Murerarbeider",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 210,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Gjennbruksbare elementer (fra lager)",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 211,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Tekniske Rom",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 212,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Tekniske føringer",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 213,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Overflater",
+          "duration": {
+            "value": 10.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 214,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Vegg",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 215,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Tak",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 216,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Gulv",
+          "duration": {
+            "value": 1.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": true,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 217,
+          "wbs": "",
+          "zone": "Sone I, Sone J",
+          "name": "Belysning og komplettering VA",
+          "duration": {
+            "value": 2.0,
+            "unit": "weeks"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-12",
+          "predecessors": [],
+          "resources": [
+            "Elektro",
+            "Rør"
+          ],
+          "notes": "",
+          "work": null,
+          "milestone": false,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "zone_id": "10",
+      "zone": "Uten sone",
+      "summary": true,
+      "notes": [],
+      "children": [
+        {
+          "task_id": 218,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Riggforhold",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 219,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Stillas 1",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 220,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Opprigg",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 221,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Nedrigg",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 222,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Stillas 2",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 223,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Opprigg",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 224,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Nedrigg",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 225,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Stillas 3",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 226,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Opprigg",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        },
+        {
+          "task_id": 227,
+          "wbs": "",
+          "zone": "Uten sone",
+          "name": "Nedrigg",
+          "duration": {
+            "value": 0.0,
+            "unit": "days"
+          },
+          "start": "2025-12-01",
+          "finish": "2025-12-01",
+          "predecessors": [],
+          "resources": [],
+          "notes": "",
+          "work": null,
+          "milestone": true,
+          "summary": false,
+          "estimate": false,
+          "links": [],
+          "logistics": {
+            "max_component": null
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "source": "Fremdrifts.xlsx",
+    "imported_at": "2025-10-17T10:53:06",
+    "units": {
+      "duration_default": "days",
+      "currency": "NOK"
+    },
+    "assumptions": [
+      "Datoer tolket i format dd.mm.yy → ISO 8601",
+      "Varighet normalisert til days/weeks/months",
+      "0 dager → milestone=true",
+      "? i varighet → estimate=true",
+      "Foregående aktiviteter uten relasjonstype → FS"
+    ],
+    "references": [
+      "NS 3420",
+      "NS 8175",
+      "TEK17"
+    ]
+  }
+}

@@ -52,6 +52,11 @@ function parseIFCElement(element: SVGElement, fallbackIndex: number): IFCElement
     return null;
   }
   
+  // Skip elements that are inside non-geometric containers
+  if (isInsideNonGeometricContainer(element)) {
+    return null;
+  }
+  
   const geometry = extractGeometry(element);
   if (!geometry) {
     return null;
@@ -80,6 +85,23 @@ function parseIFCElement(element: SVGElement, fallbackIndex: number): IFCElement
 function isGeometricElement(element: SVGElement): boolean {
   const geometricTags = ['path', 'rect', 'circle', 'ellipse', 'line', 'polyline', 'polygon'];
   return geometricTags.includes(element.tagName.toLowerCase());
+}
+
+/**
+ * Check if an element is inside a non-geometric container
+ */
+function isInsideNonGeometricContainer(element: SVGElement): boolean {
+  const nonGeometricContainers = ['defs', 'title', 'desc', 'metadata', 'style', 'script'];
+  let parent = element.parentElement;
+  
+  while (parent && parent.tagName !== 'svg') {
+    if (nonGeometricContainers.includes(parent.tagName.toLowerCase())) {
+      return true;
+    }
+    parent = parent.parentElement;
+  }
+  
+  return false;
 }
 
 /**
