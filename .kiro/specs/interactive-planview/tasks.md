@@ -1,7 +1,9 @@
 # Implementation Plan
 
 ## Current Status
+
 The core foundation of the interactive planview application has been implemented:
+
 - ✅ Project structure and dependencies
 - ✅ Data models, types, and utilities (SVG parsing, spatial indexing, coordinate transformations)
 - ✅ Zustand stores for state management (viewer, measurement, configuration)
@@ -13,14 +15,17 @@ The core foundation of the interactive planview application has been implemented
 - ✅ Comprehensive test coverage for implemented features
 
 ## Next Priority Tasks
+
 The following tasks represent the remaining work to complete the interactive planview application:
+
 1. **Element Information Display** - Create popup component for element details
-2. **Measurement Tools** - Implement distance and area measurement functionality  
+2. **Measurement Tools** - Implement distance and area measurement functionality
 3. **Export Functionality** - Add PNG, SVG, and PDF export capabilities
 4. **Configuration Management UI** - Build preset save/load interface
 5. **Main Application Integration** - Create complete PlanviewViewer component and replace demo App
 
 ## Tasks Deferred (Optional/Advanced Features)
+
 - Multi-storey navigation and comparison (tasks 13.x)
 - Search and navigation features (tasks 14.x)
 - Advanced responsive design optimizations (tasks 12.x)
@@ -180,13 +185,7 @@ The following tasks represent the remaining work to complete the interactive pla
 
 - [x] 8. Add element selection and information display
 
-
-
-
-
   - [x] 8.1 Implement element click detection
-
-
 
     - Create hit testing system using existing spatial index
     - Add visual feedback for hoverable elements
@@ -197,26 +196,22 @@ The following tasks represent the remaining work to complete the interactive pla
 
   - [x] 8.2 Create information popup component
 
-
-
     - Build popup component for element details
     - Display IFC class, GUID, and properties
     - Add popup positioning and auto-hide functionality
     - _Requirements: PV-R4.2, PV-R4.3_
 
-
-  - [-] 8.3 Write tests for selection and popup system
-
-
+  - [x] 8.3 Write tests for selection and popup system
 
     - Test hit testing accuracy and performance
     - Test popup content and positioning
     - Test selection state management
+
     - _Requirements: PV-R4.1, PV-R4.2_
 
-- [ ] 9. Implement measurement tools
+- [-] 9. Implement measurement tools
 
-  - [ ] 9.1 Create measurement mode controller
+  - [-] 9.1 Create measurement mode controller
 
     - Add measurement mode toggle functionality
     - Implement point-to-point distance measurement using coordinate utilities

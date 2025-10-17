@@ -366,6 +366,7 @@ export const SVGRenderer: React.FC<SVGRendererProps> = ({
       width={width}
       height={height}
       className={`svg-renderer ${className}`}
+      data-testid="svg-renderer"
       style={{ 
         cursor: enablePan ? 'grab' : 'crosshair',
         userSelect: 'none',

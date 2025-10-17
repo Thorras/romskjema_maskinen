@@ -215,7 +215,7 @@ describe('ViewerStore - Selection and Popup System', () => {
       const { selectElement, toggleLayer, setAvailableLayers } = useViewerStore.getState();
       
       const layers: IFCClass[] = [
-        { name: 'IfcWall', displayName: 'Wall', category: 'Structural', color: '#cccccc' }
+        { name: 'IfcWall', displayName: 'Wall', count: 1, visible: true, style: { fill: '#cccccc' } }
       ];
       setAvailableLayers(layers);
       

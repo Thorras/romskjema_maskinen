@@ -1,5 +1,4 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ElementInfoManager } from '../ElementInfoManager';
 import { useViewerStore } from '@/store/viewerStore';
 import type { IFCElement } from '@/types';
@@ -84,7 +83,7 @@ describe('ElementInfoManager', () => {
     expect(screen.getByTestId('element-button')).toBeInTheDocument();
   });
 
-  it('handles element click and shows popup', () => {
+  it('handles element click and shows popup', async () => {
     render(
       <ElementInfoManager>
         <MockSVGRenderer />
@@ -98,7 +97,9 @@ describe('ElementInfoManager', () => {
     expect(mockSelectElement).toHaveBeenCalledWith(mockElement);
 
     // Should show popup
-    expect(screen.getByText('Wall')).toBeInTheDocument(); // Display name
+    await waitFor(() => {
+      expect(screen.getByText('Wall')).toBeInTheDocument(); // Display name
+    });
     expect(screen.getByText('test-element-001')).toBeInTheDocument(); // GUID
   });
 
@@ -183,7 +184,7 @@ describe('ElementInfoManager', () => {
     expect(screen.getByTestId('another-child')).toBeInTheDocument();
   });
 
-  it('positions popup correctly based on click position', () => {
+  it('positions popup correctly based on click position', async () => {
     const { container } = render(
       <ElementInfoManager>
         <MockSVGRenderer />
@@ -195,10 +196,12 @@ describe('ElementInfoManager', () => {
     fireEvent.click(elementButton);
 
     // Check popup positioning
-    const popup = container.querySelector('.element-info-popup');
-    expect(popup).toHaveStyle({
-      left: '150px',
-      top: '200px'
+    await waitFor(() => {
+      const popup = container.querySelector('.element-info-popup');
+      expect(popup).toHaveStyle({
+        left: '150px',
+        top: '200px'
+      });
     });
   });
 
