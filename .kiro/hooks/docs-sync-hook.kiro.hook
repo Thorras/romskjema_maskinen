@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "name": "Documentation Sync",
+  "description": "Monitors TypeScript source files, configuration files, and project structure changes to automatically update README.md and documentation when code is modified",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "interactive-planview/src/**/*.ts",
+      "interactive-planview/src/**/*.tsx",
+      "interactive-planview/*.ts",
+      "interactive-planview/*.js",
+      "interactive-planview/package.json",
+      "interactive-planview/vite.config.ts",
+      "interactive-planview/tailwind.config.js",
+      "interactive-planview/tsconfig.json",
+      "interactive-planview/eslint.config.js"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Source code or configuration files have been modified in the interactive-planview TypeScript React project. Please review the changes and update the README.md file to reflect any new features, API changes, configuration updates, or architectural modifications. Ensure the documentation accurately describes the current state of the codebase, including any new components, hooks, utilities, or build configuration changes."
+  }
+}
